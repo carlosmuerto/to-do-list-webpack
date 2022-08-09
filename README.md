@@ -1,62 +1,65 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do list: list structure
 
-> Description the project.
+> In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
 
+![screenshot](./app_screenshot.JPG)
+
+## Learning objectives
+- Use webpack to bundle JavaScript.
+- Learn how to use proper ES6 syntax.
+- Use ES6 modules to write modular JavaScript.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- CSS, HTML, JavaScript (ES6)
+- luxon
+- webpack
+- single page aplication
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://carlosmuerto.github.io/to-do-list-webpack/)
 
+## Getting Starte
 
-## Getting Started
+#### Step 1:
+- Clone this repo locally using git and the following git command
+	```bash 
+	git clone https://github.com/carlosmuerto/to-do-list-webpack
+	```
+- or with GitHub CLI
+	```bash
+	gh repo clone carlosmuerto/to-do-list-webpack
+	```
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+#### Step 2:
 
+- install dependency
+	```bash
+	npm install
+	```
 
-To get a local copy up and running follow these simple example steps.
+#### Step 3:
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Run dev server
+	```bash
+	npm start
+	```
 
 ## Authors
 
-👤 **Author1**
+👤 Carlos Vivas
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-vivas-818ab831/)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](issues/).
 
 ## Show your support
 
@@ -64,12 +67,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- ### [Awesome books repository](https://github.com/cmolinan/awesome-books)
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](LICENSE.md) licensed.

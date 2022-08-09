@@ -9,7 +9,30 @@
 </head>
 
 <body>
-	<h1>Hello! webpack!</h1>
+	<div class="wrapper">
+		<header>To Do List <button id="refresh-btn" type="submit"><i class="fa-solid fa-arrows-rotate"></i></button>
+		</header>
+		<main>
+			<form id="add-task-form">
+				<label for="task-input"></label>
+				<textarea id="task-input" name="task" placeholder="Add to your list..." rows="1" required></textarea>
+				<button id="add-task-btn" type="submit"><i class="fa-solid fa-right-to-bracket"></i></button>
+			</form>
+			<div id="task_list">
+				<ul>
+					<li>
+						<div id="task-template" class="template">
+							<button name="done"><i class="fa-regular fa-square"></i></button>
+							<button name="done"><i class="fa-solid fa-check"></i></button>
+							<textarea name="task" rows="1"></textarea>
+							<button name="done"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<footer><button id="clear-task-btn">Clear all completed</button></footer>
+	</div>
 </body>
 
 </html>

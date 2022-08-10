@@ -48,6 +48,15 @@
 	npm start
 	```
 
+#### Other Consideration
+- to Run a Compliler
+	```bash
+	npm run build
+	``` 
+	and to a Watch Compliler
+	```bash
+	npm run watch
+	```
 ## Authors
 
 👤 Carlos Vivas

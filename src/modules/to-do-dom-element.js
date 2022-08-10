@@ -5,9 +5,8 @@ const taskTemplate = document.getElementById('task-item-template');
 const taskList = document.getElementById('task_list');
 
 const UpdateDoneBtn = (DoneBtnElement, completed) => {
-  const DoneIconElement = DoneBtnElement.querySelector('*');
-  if (completed) DoneIconElement.classList.add(...['fa-solid', 'fa-check']);
-  else DoneIconElement.classList.add(...['fa-regular', 'fa-square']);
+  if (completed) DoneBtnElement.classList.add('done');
+  else DoneBtnElement.classList.remove('done');
 };
 
 const ToggleDoneTask = (DoneBtnElement, task) => {
@@ -32,10 +31,16 @@ const TodoDomElement = (task) => {
     ToggleDoneTask(DoneBtnElement, task);
   });
 
-  taskElement.querySelector('textarea').value = task.description;
+  const taskElementIput = taskElement.querySelector('input');
+
+  taskElementIput.value = task.description;
+  taskElementIput.addEventListener('input', (e) => {
+    e.preventDefault();
+    task.description = taskElementIput.value;
+  });
 
   const liEle = document.createElement('li').appendChild(taskElement);
-
+  liEle.classList.add('task-item');
   return liEle;
 };
 

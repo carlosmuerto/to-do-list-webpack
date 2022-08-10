@@ -41,13 +41,17 @@ const removeTaskButtonEvent = (e) => {
 
 const addTaskToTodoList = (e) => {
   e.preventDefault();
-  const task = document.getElementById('task-input').value;
+  const taskInput = document.getElementById('task-input');
+  const task = taskInput.value;
+  taskInput.value = '';
   toDoList.addToDo(task);
   PopulateTaskList(toDoList);
 };
 
 const refreshListBtn = (e) => {
   e.preventDefault();
+  // for debuging onlly
+  // eslint-disable-next-line no-console
   console.table(toDoList.tasks);
 };
 

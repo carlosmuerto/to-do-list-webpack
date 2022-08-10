@@ -14,7 +14,7 @@ const ToggleDoneTask = (DoneBtnElement, task) => {
   UpdateDoneBtn(DoneBtnElement, task.completed);
 };
 
-const TodoDomElement = (task) => {
+const TodoDomElement = (task, parrentTodoList) => {
   if (!(task instanceof ToDo)) throw Error(`${task} is Not a ToDo object`);
 
   const taskElement = taskTemplate.cloneNode(true);
@@ -29,6 +29,7 @@ const TodoDomElement = (task) => {
   DoneBtnElement.addEventListener('click', (e) => {
     e.preventDefault();
     ToggleDoneTask(DoneBtnElement, task);
+    parrentTodoList.updateStoreFormData();
   });
 
   const taskElementIput = taskElement.querySelector('input');
@@ -47,7 +48,9 @@ const TodoDomElement = (task) => {
 const PopulateTaskList = (toDoList) => {
   if (!(toDoList instanceof ToDoList)) throw Error(`${toDoList} is Not a ToDoList object`);
   toDoList.tasks.forEach((task) => {
-    if (!document.getElementById(`task-item-${task.index}`)) { taskList.querySelector('ul').appendChild(TodoDomElement(task)); }
+    if (!document.getElementById(`task-item-${task.index}`)) {
+      taskList.querySelector('ul').appendChild(TodoDomElement(task, toDoList));
+    }
   });
 };
 

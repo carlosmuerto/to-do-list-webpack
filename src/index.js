@@ -39,10 +39,24 @@ const removeTaskButtonEvent = (e) => {
   toDoList.deleteDoneTasks();
 };
 
+const addTaskToTodoList = (e) => {
+  e.preventDefault();
+  const task = document.getElementById('task-input').value;
+  toDoList.addToDo(task);
+  PopulateTaskList(toDoList);
+};
+
+const refreshListBtn = (e) => {
+  e.preventDefault();
+  console.table(toDoList.tasks);
+};
+
 const init = () => {
   toDoList.init(exmpleToDo);
   PopulateTaskList(toDoList);
   document.getElementById('clear-task-btn').addEventListener('click', removeTaskButtonEvent);
+  document.getElementById('add-task-form').addEventListener('submit', addTaskToTodoList);
+  document.getElementById('refresh-btn').addEventListener('click', refreshListBtn);
 };
 
 window.addEventListener('load', init);

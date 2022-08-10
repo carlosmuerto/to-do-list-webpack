@@ -18,7 +18,7 @@ class ToDoList {
   }
 
   addToDo(desc, completed, index) {
-    this.addToDoObj(new ToDo(desc, index, completed));
+    this.addToDoObj(new ToDo(desc, index || this.generateNextIndex(), completed));
   }
 
   delete(index) {
@@ -37,7 +37,7 @@ class ToDoList {
 
   init(listTodo) {
     listTodo.forEach((todo) => {
-      this.addToDo(todo.description, todo.completed, todo.index || this.generateNextIndex());
+      this.addToDo(todo.description, todo.completed, todo.index);
     });
   }
 }

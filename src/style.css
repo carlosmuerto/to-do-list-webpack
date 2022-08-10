@@ -15,3 +15,7 @@ body {
 .wrapper {
   margin: 0 10%;
 }
+
+.template {
+  display: none;
+}

@@ -22,11 +22,17 @@ class ToDoList {
   }
 
   delete(index) {
-    return _.remove(this.tasks, (task) => task.index === index);
+    const delTask = _.remove(this.tasks, (task) => task.index === index);
+    this.refreshTaskIndex();
+    return delTask;
   }
 
   getDoneTasks() {
     return this.tasks.filter((task) => task.completed);
+  }
+
+  refreshTaskIndex() {
+    this.tasks.forEach((task, index) => { task.index = index; });
   }
 
   deleteDoneTasks() {
@@ -39,6 +45,7 @@ class ToDoList {
     listTodo.forEach((todo) => {
       this.addToDo(todo.description, todo.completed, todo.index);
     });
+    this.refreshTaskIndex();
   }
 }
 

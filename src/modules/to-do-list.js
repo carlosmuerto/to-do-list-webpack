@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import ToDo from './to-do.js';
+import storageAvailable from './localStorageTools.js';
 
 class ToDoList {
   constructor(list = []) {
@@ -10,6 +11,7 @@ class ToDoList {
     if (!(toDo instanceof ToDo)) throw Error(`${toDo} is Not a ToDo object`);
     this.tasks.push(toDo);
     this.tasks = _.sortBy(this.tasks, ['index', 'description']);
+    this.refreshTaskIndex();
   }
 
   generateNextIndex() {
@@ -33,6 +35,7 @@ class ToDoList {
 
   refreshTaskIndex() {
     this.tasks.forEach((task, index) => { task.index = index; });
+    this.updateStoreFormData();
   }
 
   deleteDoneTasks() {
@@ -41,11 +44,25 @@ class ToDoList {
     });
   }
 
-  init(listTodo) {
-    listTodo.forEach((todo) => {
-      this.addToDo(todo.description, todo.completed, todo.index);
-    });
-    this.refreshTaskIndex();
+  getStoreFormData() {
+    const obj = JSON.parse(localStorage.getItem('ToDoList-tasks-data'));
+    if (obj) {
+      obj.tasks.forEach((todo) => {
+        this.addToDo(todo.description, todo.completed, todo.index);
+      });
+    }
+  }
+
+  updateStoreFormData() {
+    if (!storageAvailable()) return;
+    localStorage.setItem(
+      'ToDoList-tasks-data',
+      JSON.stringify(this),
+    );
+  }
+
+  init() {
+    this.getStoreFormData();
   }
 }
 

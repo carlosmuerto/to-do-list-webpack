@@ -1,0 +1,150 @@
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+input,
+button {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+header,
+main,
+footer {
+  display: flex;
+}
+
+header,
+main {
+  background: #fff;
+}
+
+main {
+  justify-content: stretch;
+  flex-direction: column;
+}
+
+footer {
+  justify-content: center;
+  align-items: stretch;
+}
+
+header {
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+header h1 {
+  font-size: 1rem;
+}
+
+.icon {
+  color: #c1c1c3;
+}
+
+.wrapper {
+  margin: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 5vh;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+
+.wrapper-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+#task_list > ul {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+form#add-task-form,
+.task-item {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+footer button {
+  height: 3rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.task-item input {
+  width: 100%;
+  height: 3rem;
+}
+
+.task-item .done-check.done + input {
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form#add-task-form input {
+  font-size: 1rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.task-item .done-check {
+  border: 2px solid #c1c1c3;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+.task-item .done-check > * {
+  width: 1rem;
+  height: 1rem;
+  color: transparent;
+}
+
+.task-item .done-check.done > * {
+  color: #2e8ae6 !important;
+}
+
+.template {
+  display: none;
+}

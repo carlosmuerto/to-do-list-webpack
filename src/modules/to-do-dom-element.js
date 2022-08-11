@@ -7,6 +7,7 @@ const taskList = document.getElementById('task_list');
 const UpdateDoneBtn = (DoneBtnElement, completed) => {
   if (completed) DoneBtnElement.classList.add('done');
   else DoneBtnElement.classList.remove('done');
+  DoneBtnElement.parentNode.dataset.completed = completed;
 };
 
 const ToggleDoneTask = (DoneBtnElement, task) => {
@@ -21,6 +22,10 @@ const TodoDomElement = (task, parrentTodoList) => {
 
   taskElement.id = taskElement.id.replace('template', task.index);
   taskElement.classList.remove('template');
+
+  taskElement.dataset.index = task.index;
+  taskElement.dataset.completed = task.completed;
+  taskElement.dataset.description = task.description;
 
   const DoneBtnElement = taskElement.querySelector('button');
 
@@ -55,7 +60,7 @@ const PopulateTaskList = (toDoList) => {
 };
 
 const removeTaskElement = (index) => {
-  document.getElementById(`task-item-${index}`).remove();
+  document.querySelector(`[data-index="${index}"]`).remove();
 };
 
 export { PopulateTaskList, removeTaskElement };

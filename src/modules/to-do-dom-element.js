@@ -8,6 +8,7 @@ const UpdateDoneBtn = (DoneBtnElement, completed) => {
   if (completed) DoneBtnElement.classList.add('done');
   else DoneBtnElement.classList.remove('done');
   DoneBtnElement.parentNode.dataset.completed = completed;
+  DoneBtnElement.parentNode.querySelector('input').readOnly = completed;
 };
 
 const ToggleDoneTask = (DoneBtnElement, task) => {

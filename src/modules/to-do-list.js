@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { sortBy, remove } from 'lodash';
 import ToDo from './to-do.js';
 import storageAvailable from './localStorageTools.js';
 
@@ -10,7 +10,7 @@ class ToDoList {
   addToDoObj(toDo) {
     if (!(toDo instanceof ToDo)) throw Error(`${toDo} is Not a ToDo object`);
     this.tasks.push(toDo);
-    this.tasks = _.sortBy(this.tasks, ['index', 'description']);
+    this.tasks = sortBy(this.tasks, ['index', 'description']);
     this.refreshTaskIndex();
   }
 
@@ -24,7 +24,7 @@ class ToDoList {
   }
 
   delete(index) {
-    const delTask = _.remove(this.tasks, (task) => task.index === index);
+    const delTask = remove(this.tasks, (task) => task.index === index);
     this.refreshTaskIndex();
     return delTask;
   }

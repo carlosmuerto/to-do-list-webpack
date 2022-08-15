@@ -1,5 +1,10 @@
 import './style.css';
-import '@fortawesome/fontawesome-free/js/all.js';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+
+import {
+  faArrowsRotate, faRightToBracket, faCheck, faEllipsisVertical,
+} from '@fortawesome/free-solid-svg-icons';
+
 import ToDoList from './modules/to-do-list.js';
 import { PopulateTaskList, removeTaskElement } from './modules/to-do-dom-element.js';
 
@@ -35,6 +40,10 @@ const init = () => {
   document.getElementById('clear-task-btn').addEventListener('click', removeTaskButtonEvent);
   document.getElementById('add-task-form').addEventListener('submit', addTaskToTodoList);
   document.getElementById('refresh-btn').addEventListener('click', refreshListBtn);
+
+  // Kicks off the process of finding <i> tags and replacing with <svg>
+  library.add(faArrowsRotate, faRightToBracket, faCheck, faEllipsisVertical);
+  dom.watch();
 };
 
 window.addEventListener('load', init);

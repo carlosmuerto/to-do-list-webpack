@@ -4,7 +4,6 @@ const TodoList = require('./to-do-list.js');
 
 const toDoListForAdd = new TodoList([], false);
 const toDoListDelete = new TodoList([], false);
-const expectedtoDoListForDeleteIndex = 0;
 const expectedtoDoListForAdd = {
   tasks: [
     {

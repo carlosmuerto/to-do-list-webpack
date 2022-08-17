@@ -1,10 +1,11 @@
-import { sortBy, remove } from 'lodash';
-import ToDo from './to-do.js';
-import storageAvailable from './localStorageTools.js';
+const { sortBy, remove } = require('lodash');
+const ToDo = require('./to-do.js');
+const storageAvailable = require('./localStorageTools.js');
 
 class ToDoList {
-  constructor(list = []) {
+  constructor(list = [], useLocalStorage = true) {
     this.tasks = list;
+    this.useLocalStorage = useLocalStorage;
   }
 
   addToDoObj(toDo) {
@@ -35,7 +36,7 @@ class ToDoList {
 
   refreshTaskIndex() {
     this.tasks.forEach((task, index) => { task.index = index; });
-    this.updateStoreFormData();
+    if (this.useLocalStorage) this.updateStoreFormData();
   }
 
   deleteDoneTasks() {
@@ -66,4 +67,5 @@ class ToDoList {
   }
 }
 
-export default ToDoList;
+// export default ToDoList;
+module.exports = ToDoList;

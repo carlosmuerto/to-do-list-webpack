@@ -1,12 +1,13 @@
 import './style.css';
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
 
-import {
+const { library, dom } = require('@fortawesome/fontawesome-svg-core');
+
+const {
   faArrowsRotate, faRightToBracket, faCheck, faEllipsisVertical,
-} from '@fortawesome/free-solid-svg-icons';
+} = require('@fortawesome/free-solid-svg-icons');
 
-import ToDoList from './modules/to-do-list.js';
-import { PopulateTaskList, removeTaskElement } from './modules/to-do-dom-element.js';
+const ToDoList = require('./modules/to-do-list.js');
+const { PopulateTaskList, removeTaskElement } = require('./modules/to-do-dom-element.js');
 
 const toDoList = new ToDoList();
 

@@ -1,5 +1,5 @@
-import ToDo from './to-do.js';
-import ToDoList from './to-do-list.js';
+const ToDo = require('./to-do.js');
+const ToDoList = require('./to-do-list.js');
 
 const taskTemplate = document.getElementById('task-item-template');
 const taskList = document.getElementById('task_list');
@@ -64,4 +64,4 @@ const removeTaskElement = (index) => {
   document.querySelector(`[data-index="${index}"]`).remove();
 };
 
-export { PopulateTaskList, removeTaskElement };
+module.exports = { PopulateTaskList, removeTaskElement };

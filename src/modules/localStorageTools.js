@@ -22,4 +22,5 @@ const storageAvailable = () => {
       && (storage && storage.length !== 0);
   }
 };
-export default storageAvailable;
+// export default storageAvailable;
+module.exports = storageAvailable;

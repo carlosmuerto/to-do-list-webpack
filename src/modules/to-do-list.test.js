@@ -1,9 +1,9 @@
-const TodoList = require('./to-do-list.js');
+import ToDoList from './to-do-list.js';
 
 // Arrenge
 
-const toDoListForAdd = new TodoList([], false);
-const toDoListDelete = new TodoList([], false);
+const toDoListForAdd = new ToDoList([], false);
+const toDoListDelete = new ToDoList([], false);
 const expectedtoDoListForAdd = {
   tasks: [
     {

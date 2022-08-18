@@ -1,6 +1,6 @@
-const { sortBy, remove } = require('lodash');
-const ToDo = require('./to-do.js');
-const storageAvailable = require('./localStorageTools.js');
+import { sortBy, remove } from 'lodash';
+import ToDo from './to-do.js';
+import storageAvailable from './localStorageTools.js';
 
 class ToDoList {
   constructor(list = [], useLocalStorage = true) {
@@ -67,5 +67,4 @@ class ToDoList {
   }
 }
 
-// export default ToDoList;
-module.exports = ToDoList;
+export default ToDoList;

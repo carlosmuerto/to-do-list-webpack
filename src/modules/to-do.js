@@ -9,4 +9,5 @@ class ToDo {
     this.completed = true;
   }
 }
-module.exports = ToDo;
+
+export default ToDo;

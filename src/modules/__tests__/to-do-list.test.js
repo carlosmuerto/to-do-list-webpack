@@ -25,7 +25,7 @@ const localStorageMock = (function () {
       return store;
     },
   };
-}());
+})();
 
 global.window.localStorage = localStorageMock;
 global.localStorage = localStorageMock;
@@ -35,6 +35,7 @@ global.localStorage = localStorageMock;
 const toDoListForAdd = new ToDoList();
 const toDoListDelete = new ToDoList();
 const toDoListEdit = new ToDoList();
+const toDoListClear = new ToDoList();
 const expectedtoDoListForAdd = {
   tasks: [
     {
@@ -55,6 +56,9 @@ toDoListDelete.delete(0);
 toDoListEdit.addToDo('some value', false);
 toDoListEdit.editTask(0, 'test task', true);
 
+toDoListClear.addToDo('Data to be cleared 1', true);
+toDoListClear.addToDo('Data to be cleared 2', true);
+toDoListClear.deleteDoneTasks();
 // accert
 
 describe('Test for TodoList Class', () => {
@@ -66,7 +70,11 @@ describe('Test for TodoList Class', () => {
     expect(toDoListDelete.tasks).toEqual([]);
   });
 
-  test('Editing task\'s description and complete', () => {
+  test("Editing task's description and complete", () => {
     expect(toDoListEdit).toEqual(expectedtoDoListForAdd);
+  });
+
+  test("Clear Completed task's ", () => {
+    expect(toDoListClear.tasks).toEqual([]);
   });
 });

@@ -8,6 +8,7 @@ const storageAvailable = () => {
     storage.removeItem(x);
     return true;
   } catch (e) {
+    console.log(e);
     return e instanceof DOMException && (
       // everything except Firefox
       e.code === 22
@@ -22,5 +23,4 @@ const storageAvailable = () => {
       && (storage && storage.length !== 0);
   }
 };
-// export default storageAvailable;
-module.exports = storageAvailable;
+export default storageAvailable;

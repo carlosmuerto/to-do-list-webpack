@@ -4,9 +4,6 @@ class ToDo {
     this.completed = completed;
     this.index = index;
   }
-
-  done() {
-    this.completed = true;
-  }
 }
-module.exports = ToDo;
+
+export default ToDo;

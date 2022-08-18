@@ -1,57 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660768156363" clover="3.2.0">
-  <project timestamp="1660768156363" name="All files">
-    <metrics statements="42" coveredstatements="23" conditionals="24" coveredconditionals="5" methods="20" coveredmethods="9" elements="86" coveredelements="37" complexity="0" loc="42" ncloc="42" packages="1" files="3" classes="3"/>
-    <file name="localStorageTools.js" path="C:\Users\HP\Documents\GitHub\to-do-list-webpack\src\modules\localStorageTools.js">
-      <metrics statements="9" coveredstatements="2" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
+<coverage generated="1660854167034" clover="3.2.0">
+  <project timestamp="1660854167034" name="All files">
+    <metrics statements="74" coveredstatements="61" conditionals="39" coveredconditionals="16" methods="28" coveredmethods="22" elements="141" coveredelements="99" complexity="0" loc="74" ncloc="74" packages="1" files="4" classes="4"/>
+    <file name="localStorageTools.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\localStorageTools.js">
+      <metrics statements="8" coveredstatements="7" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="4" count="0" type="stmt"/>
-      <line num="5" count="0" type="stmt"/>
-      <line num="6" count="0" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
       <line num="11" count="0" type="cond" truecount="0" falsecount="7"/>
+    </file>
+    <file name="to-do-dom-element.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\to-do-dom-element.js">
+      <metrics statements="36" coveredstatements="29" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="5"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
       <line num="26" count="1" type="stmt"/>
-    </file>
-    <file name="to-do-list.js" path="C:\Users\HP\Documents\GitHub\to-do-list-webpack\src\modules\to-do-list.js">
-      <metrics statements="28" coveredstatements="17" conditionals="14" coveredconditionals="5" methods="17" coveredmethods="8"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="12" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="28" count="1" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
       <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
       <line num="34" count="0" type="stmt"/>
-      <line num="38" count="3" type="stmt"/>
-      <line num="39" count="3" type="cond" truecount="1" falsecount="1"/>
-      <line num="43" count="0" type="stmt"/>
-      <line num="44" count="0" type="stmt"/>
-      <line num="49" count="0" type="stmt"/>
-      <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="51" count="0" type="stmt"/>
-      <line num="52" count="0" type="stmt"/>
-      <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="66" count="0" type="stmt"/>
-      <line num="71" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="51" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
     </file>
-    <file name="to-do.js" path="C:\Users\HP\Documents\GitHub\to-do-list-webpack\src\modules\to-do.js">
-      <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
+    <file name="to-do-list.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\to-do-list.js">
+      <metrics statements="27" coveredstatements="22" conditionals="21" coveredconditionals="12" methods="18" coveredmethods="15"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="11" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="12" count="5" type="stmt"/>
+      <line num="13" count="5" type="stmt"/>
+      <line num="14" count="5" type="stmt"/>
+      <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="23" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="4" type="stmt"/>
+      <line num="28" count="3" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="37" count="8" type="stmt"/>
+      <line num="38" count="8" type="cond" truecount="1" falsecount="1"/>
+      <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="44" count="1" type="cond" truecount="2" falsecount="2"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="51" count="2" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="65" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+    </file>
+    <file name="to-do.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\to-do.js">
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="6" type="stmt"/>
+      <line num="4" count="6" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
     </file>
   </project>
 </coverage>

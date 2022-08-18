@@ -1,8 +1,5 @@
-const ToDo = require('./to-do.js');
-const ToDoList = require('./to-do-list.js');
-
-const taskTemplate = document.getElementById('task-item-template');
-const taskList = document.getElementById('task_list');
+import ToDo from './to-do.js';
+import ToDoList from './to-do-list.js';
 
 const UpdateDoneBtn = (DoneBtnElement, completed) => {
   if (completed) DoneBtnElement.classList.add('done');
@@ -12,14 +9,14 @@ const UpdateDoneBtn = (DoneBtnElement, completed) => {
 };
 
 const ToggleDoneTask = (DoneBtnElement, task, parrentTodoList) => {
-  parrentTodoList.EditTask(task.index, null, !task.completed);
-  UpdateDoneBtn(DoneBtnElement, task.completed);
+  parrentTodoList.editTask(task.index, null, !(task.completed));
+  UpdateDoneBtn(DoneBtnElement, parrentTodoList.tasks[task.index].completed);
 };
 
 const TodoDomElement = (task, parrentTodoList) => {
   if (!(task instanceof ToDo)) throw Error(`${task} is Not a ToDo object`);
 
-  const taskElement = taskTemplate.cloneNode(true);
+  const taskElement = document.getElementById('task-item-template').cloneNode(true);
 
   taskElement.id = taskElement.id.replace('template', task.index);
   taskElement.classList.remove('template');
@@ -42,8 +39,7 @@ const TodoDomElement = (task, parrentTodoList) => {
   taskElementIput.value = task.description;
   taskElementIput.addEventListener('input', (e) => {
     e.preventDefault();
-    task.description = taskElementIput.value;
-    parrentTodoList.EditTask(task.index, taskElementIput.value, null);
+    parrentTodoList.editTask(task.index, taskElementIput.value, null);
   });
 
   const liEle = document.createElement('li').appendChild(taskElement);
@@ -55,7 +51,7 @@ const PopulateTaskList = (toDoList) => {
   if (!(toDoList instanceof ToDoList)) throw Error(`${toDoList} is Not a ToDoList object`);
   toDoList.tasks.forEach((task) => {
     if (!document.getElementById(`task-item-${task.index}`)) {
-      taskList.querySelector('ul').appendChild(TodoDomElement(task, toDoList));
+      document.getElementById('task_list').querySelector('ul').appendChild(TodoDomElement(task, toDoList));
     }
   });
 };
@@ -64,4 +60,4 @@ const removeTaskElement = (index) => {
   document.querySelector(`[data-index="${index}"]`).remove();
 };
 
-module.exports = { PopulateTaskList, removeTaskElement };
+export { PopulateTaskList, removeTaskElement };

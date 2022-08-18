@@ -41,7 +41,7 @@ class ToDoList {
   editTask(index, description, completed) {
     if (index >= 0) {
       if (description) this.tasks[index].description = description;
-      if (completed) this.tasks[index].completed = completed;
+      if (completed !== undefined || completed !== null) this.tasks[index].completed = completed;
       this.updateStoreFormData();
     }
   }

@@ -25,7 +25,7 @@ const localStorageMock = (function () {
       return store;
     },
   };
-})();
+}());
 
 global.window.localStorage = localStorageMock;
 global.localStorage = localStorageMock;

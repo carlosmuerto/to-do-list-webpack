@@ -12,8 +12,8 @@ const UpdateDoneBtn = (DoneBtnElement, completed) => {
 };
 
 const ToggleDoneTask = (DoneBtnElement, task, parrentTodoList) => {
-  parrentTodoList.EditTask(task.index, null, !task.completed);
-  UpdateDoneBtn(DoneBtnElement, task.completed);
+  parrentTodoList.editTask(task.index, null, !(task.completed));
+  UpdateDoneBtn(DoneBtnElement, parrentTodoList.tasks[task.index].completed);
 };
 
 const TodoDomElement = (task, parrentTodoList) => {
@@ -42,7 +42,7 @@ const TodoDomElement = (task, parrentTodoList) => {
   taskElementIput.value = task.description;
   taskElementIput.addEventListener('input', (e) => {
     e.preventDefault();
-    parrentTodoList.EditTask(task.index, taskElementIput.value, null);
+    parrentTodoList.editTask(task.index, taskElementIput.value, null);
   });
 
   const liEle = document.createElement('li').appendChild(taskElement);

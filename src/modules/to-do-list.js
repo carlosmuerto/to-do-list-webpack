@@ -3,9 +3,8 @@ import ToDo from './to-do.js';
 import storageAvailable from './localStorageTools.js';
 
 class ToDoList {
-  constructor(list = [], useLocalStorage = true) {
+  constructor(list = []) {
     this.tasks = list;
-    this.useLocalStorage = useLocalStorage;
   }
 
   addToDoObj(toDo) {

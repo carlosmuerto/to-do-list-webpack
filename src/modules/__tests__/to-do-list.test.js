@@ -1,4 +1,5 @@
 import ToDoList from '../to-do-list.js';
+import ToDo from '../to-do.js';
 
 // eslint-disable-next-line func-names
 const localStorageMock = (function () {
@@ -38,11 +39,7 @@ const toDoListEdit = new ToDoList();
 const toDoListClear = new ToDoList();
 const expectedtoDoListForAdd = {
   tasks: [
-    {
-      completed: true,
-      description: 'test task',
-      index: 0,
-    },
+    new ToDo('test task', 0, true),
   ],
 };
 

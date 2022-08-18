@@ -4,10 +4,6 @@ class ToDo {
     this.completed = completed;
     this.index = index;
   }
-
-  done() {
-    this.completed = true;
-  }
 }
 
 export default ToDo;

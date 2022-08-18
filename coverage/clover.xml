@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660849029857" clover="3.2.0">
-  <project timestamp="1660849029873" name="All files">
-    <metrics statements="39" coveredstatements="32" conditionals="31" coveredconditionals="12" methods="21" coveredmethods="17" elements="91" coveredelements="61" complexity="0" loc="39" ncloc="39" packages="1" files="3" classes="3"/>
+<coverage generated="1660849455341" clover="3.2.0">
+  <project timestamp="1660849455341" name="All files">
+    <metrics statements="38" coveredstatements="32" conditionals="31" coveredconditionals="12" methods="20" coveredmethods="17" elements="89" coveredelements="61" complexity="0" loc="38" ncloc="38" packages="1" files="3" classes="3"/>
     <file name="localStorageTools.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\localStorageTools.js">
       <metrics statements="8" coveredstatements="7" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
@@ -44,11 +44,10 @@
       <line num="73" count="0" type="stmt"/>
     </file>
     <file name="to-do.js" path="C:\Users\Carlos\Documents\Microverse\Program\Module 02\to-do-list-webpack\src\modules\to-do.js">
-      <metrics statements="4" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="3" count="5" type="stmt"/>
-      <line num="4" count="5" type="stmt"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="6" type="stmt"/>
+      <line num="4" count="6" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
     </file>
   </project>
 </coverage>

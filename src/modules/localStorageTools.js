@@ -8,7 +8,6 @@ const storageAvailable = () => {
     storage.removeItem(x);
     return true;
   } catch (e) {
-    console.log(e);
     return e instanceof DOMException && (
       // everything except Firefox
       e.code === 22

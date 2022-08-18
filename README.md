@@ -64,6 +64,10 @@
 - GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-vivas-818ab831/)
 
+👤 Addis Tsega
+
+- GitHub: [@Aseadd](https://github.com/Aseadd)
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!

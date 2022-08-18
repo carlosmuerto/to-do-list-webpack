@@ -11,8 +11,8 @@ const UpdateDoneBtn = (DoneBtnElement, completed) => {
   DoneBtnElement.parentNode.querySelector('input').readOnly = completed;
 };
 
-const ToggleDoneTask = (DoneBtnElement, task) => {
-  task.completed = !task.completed;
+const ToggleDoneTask = (DoneBtnElement, task, parrentTodoList) => {
+  parrentTodoList.EditTask(task.index, null, !task.completed);
   UpdateDoneBtn(DoneBtnElement, task.completed);
 };
 
@@ -34,8 +34,7 @@ const TodoDomElement = (task, parrentTodoList) => {
 
   DoneBtnElement.addEventListener('click', (e) => {
     e.preventDefault();
-    ToggleDoneTask(DoneBtnElement, task);
-    parrentTodoList.updateStoreFormData();
+    ToggleDoneTask(DoneBtnElement, task, parrentTodoList);
   });
 
   const taskElementIput = taskElement.querySelector('input');
@@ -44,6 +43,7 @@ const TodoDomElement = (task, parrentTodoList) => {
   taskElementIput.addEventListener('input', (e) => {
     e.preventDefault();
     task.description = taskElementIput.value;
+    parrentTodoList.EditTask(task.index, taskElementIput.value, null);
   });
 
   const liEle = document.createElement('li').appendChild(taskElement);

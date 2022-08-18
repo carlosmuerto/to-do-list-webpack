@@ -50,6 +50,7 @@ class ToDoList {
     this.getDoneTasks().forEach((task) => {
       this.delete(task.index);
     });
+    this.updateStoreFormData();
   }
 
   getStoreFormData() {

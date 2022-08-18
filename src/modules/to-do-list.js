@@ -38,10 +38,10 @@ class ToDoList {
     if (this.useLocalStorage) this.updateStoreFormData();
   }
 
-  EditTask(index, description = null, completed = null) {
-    if (index) {
-      this.tasks[index].description = description || this.tasks[index].description;
-      this.tasks[index].completed = completed || this.tasks[index].completed;
+  EditTask(index, description, completed) {
+    if (index >= 0) {
+      if (description) this.tasks[index].description = description;
+      if (completed) this.tasks[index].completed = completed;
       this.updateStoreFormData();
     }
   }

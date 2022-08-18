@@ -42,7 +42,6 @@ const TodoDomElement = (task, parrentTodoList) => {
   taskElementIput.value = task.description;
   taskElementIput.addEventListener('input', (e) => {
     e.preventDefault();
-    task.description = taskElementIput.value;
     parrentTodoList.EditTask(task.index, taskElementIput.value, null);
   });
 

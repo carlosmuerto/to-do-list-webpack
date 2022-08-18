@@ -32,8 +32,9 @@ global.localStorage = localStorageMock;
 
 // Arrenge
 
-const toDoListForAdd = new ToDoList([]);
-const toDoListDelete = new ToDoList([]);
+const toDoListForAdd = new ToDoList();
+const toDoListDelete = new ToDoList();
+const toDoListEdit = new ToDoList();
 const expectedtoDoListForAdd = {
   tasks: [
     {
@@ -47,15 +48,25 @@ const expectedtoDoListForAdd = {
 // act
 
 toDoListForAdd.addToDo('test task', true);
+
 toDoListDelete.addToDo('ffdagf', true);
 toDoListDelete.delete(0);
+
+toDoListEdit.addToDo('some value', false);
+toDoListEdit.editTask(0, 'test task', true);
+
 // accert
 
 describe('Test for TodoList Class', () => {
   test('Add Task to the List', () => {
     expect(toDoListForAdd).toEqual(expectedtoDoListForAdd);
   });
+
   test('Delete task from list', () => {
     expect(toDoListDelete.tasks).toEqual([]);
+  });
+
+  test('Editing task\'s description and complete', () => {
+    expect(toDoListEdit).toEqual(expectedtoDoListForAdd);
   });
 });

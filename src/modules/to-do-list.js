@@ -38,7 +38,7 @@ class ToDoList {
     if (this.useLocalStorage) this.updateStoreFormData();
   }
 
-  EditTask(index, description, completed) {
+  editTask(index, description, completed) {
     if (index >= 0) {
       if (description) this.tasks[index].description = description;
       if (completed) this.tasks[index].completed = completed;

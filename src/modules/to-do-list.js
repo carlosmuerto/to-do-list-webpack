@@ -35,7 +35,7 @@ class ToDoList {
 
   refreshTaskIndex() {
     this.tasks.forEach((task, index) => { task.index = index; });
-    if (this.useLocalStorage) this.updateStoreFormData();
+    this.updateStoreFormData();
   }
 
   editTask(index, description, completed) {
